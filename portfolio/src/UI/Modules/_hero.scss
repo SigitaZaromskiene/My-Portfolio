@@ -1,0 +1,56 @@
+.hero_container {
+  @include flex(space-between, center, row, 0px);
+  padding: 0px 100px;
+
+  &_left {
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 40px;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $mainGreenColor;
+      margin: 0px;
+    }
+
+    &_subheading {
+      color: $mainGreenColor;
+      font-size: 1.8rem;
+    }
+
+    &_features {
+      @include flex(flex-start, center, row, 30px);
+      margin-bottom: 40px;
+      color: white;
+
+      & p:after {
+        content: "";
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        padding: 2px;
+        border-radius: 50%;
+        background-color: $mainGreenColor;
+        margin-left: 20px;
+      }
+    }
+
+    &_icons {
+      @include flex(flex-start, center, row, 50px);
+      font-size: 2.5rem;
+
+      a {
+        color: white;
+
+        &:hover {
+          color: $mainGreenColor;
+        }
+      }
+
+      &_icon {
+        cursor: pointer;
+      }
+    }
+  }
+}
