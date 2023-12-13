@@ -1,4 +1,50 @@
 .nav_container {
-    @include flex (space-between, center, row, 0px)
-    
+  @include flex(space-between, center, row, 0px);
+
+  &_logo {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    padding: 7px;
+    text-align: center;
+    font-size: 2rem;
+    background-color: $mainGreenColor;
+
+    border: 2px solid white;
+  }
+
+  &_links {
+
+
+    font-size: 1.2rem;
+    @include flex(center, center, row, 40px);
+
+    &_link {
+      color: white;
+      text-decoration: none;
+      border: 1px solid transparent;
+      padding: 10px 15px;
+      cursor: pointer;
+     
+
+       a{
+        text-decoration: none;
+        color: white;
+       }
+      
+
+      &:last-of-type a {
+        border: 1px solid white;
+        padding: 10px 15px;
+        color: black;
+        background-color: $mainGreenColor;
+      }
+
+      
+    }
+  }
+}
+
+.active {
+ color: $mainGreenColor;       
 }

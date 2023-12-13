@@ -1,19 +1,67 @@
-function Nav (){
-    return (
-        <div className='nav_container'>
-            <div className='nav_container_logo'>
-                <div>S</div>
-            </div>
-            <div className='nav_container_links'>
-                <div className='nav_container_links_link'>
-                    <a href='#'>Home</a>
-                    <a href='#'>About</a>
-                    <a href='#'>Contact</a>
-                    <a href='#'>Resume</a>
-                </div>
-            </div>
+import { useState } from "react";
+
+function Nav() {
+  const [active, setActive] = useState("home");
+
+  
+  return (
+    <div className="nav_container">
+      <div className="nav_container_logo">S</div>
+      <div className="nav_container_links">
+        <div onClick={() => setActive("home")}>
+          <a
+            href="#"
+            className={
+              active === "home"
+                ? "nav_container_links_link + active"
+                : "nav_container_links_link"
+            }
+          >
+            HOME
+          </a>
         </div>
-    )
+        <div onClick={() => setActive("about")}>
+          <a
+            href="#"
+            className={
+              active === "about"
+                ? "nav_container_links_link + active"
+                : "nav_container_links_link"
+            }
+          >
+            ABOUT
+          </a>
+        </div>
+        <div onClick={() => setActive("projects")}>
+          <a
+            href="#"
+            className={
+              active === "projects"
+                ? "nav_container_links_link + active"
+                : "nav_container_links_link"
+            }
+          >
+            PROJECTS
+          </a>
+        </div>
+        <div onClick={() => setActive("contact")}>
+          <a
+            href="#"
+            className={
+              active === "contact"
+                ? "nav_container_links_link + active"
+                : "nav_container_links_link"
+            }
+          >
+            CONTACT
+          </a>
+        </div>
+        <div className="nav_container_links_link">
+          <a href="#">RESUME</a>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Nav
+export default Nav;
