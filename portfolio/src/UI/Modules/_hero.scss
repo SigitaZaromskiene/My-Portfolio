@@ -1,39 +1,10 @@
 .hero_container {
   @include flex(space-between, center, row, 0px);
-  
-
 
   &_left {
     h1 {
       font-size: 4rem;
       margin-bottom: 40px;
-    }
-    h3 {
-      font-size: 2rem;
-      font-weight: 600;
-      color: $mainGreenColor;
-      margin: 0px;
-      position: relative;
-      z-index: 221;
-      margin-bottom: 20px;
-     
-
-
-    &:before {
-        content: "";
-        position: absolute;
-        left: 1px;
-        top: 45px;
-        width: 350px;
-        height: 3px;
-
-        background: linear-gradient(to left, #00cf5d, white 100%);
-        z-index: -1;
-       
-        
-        
-        
-      }
     }
 
     &_subheading {
@@ -45,6 +16,10 @@
       @include flex(flex-start, center, row, 30px);
       margin-bottom: 40px;
       color: white;
+
+      p {
+        font-size: 1.5rem;
+      }
 
       & p:after {
         content: "";

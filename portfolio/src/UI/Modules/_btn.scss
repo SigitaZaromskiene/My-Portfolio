@@ -1,15 +1,16 @@
 .btn {
-    border: 1px solid white;
+    border: 2px solid $mainGreenColor;
     padding: 10px 15px;
     color: black;
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer;
     width: 11rem;
+    background-color: white;
 
 &:hover {
     background-color: $mainGreenColor;
-    border: 2px solid white;
+    border: 2px solid $mainGreenColor;
 }
 
     &_active {

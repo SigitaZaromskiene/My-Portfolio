@@ -1,8 +1,11 @@
 import Btn from "./Btn";
 import photo from "../UI/Img/me.jpg"
+import LoveToDo from "./LoveToDo";
 
 function About() {
   return (
+    <>
+    <LoveToDo/>
     <div className="about_container wrapper">
       <div className="about_container_left">
         <h3>
@@ -20,6 +23,7 @@ function About() {
       </div>
       <img src={photo} alt="Sigita" />
     </div>
+    </>
   );
 }
 

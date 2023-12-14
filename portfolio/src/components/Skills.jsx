@@ -9,11 +9,12 @@ import {
   faSass,
   faNpm,
 } from "@fortawesome/free-brands-svg-icons";
+import Heading from "./Heading";
 
 function Skills() {
   return (
     <div className="skills_container wrapper">
-      <h2>Tech Skills</h2>
+        <Heading text='Tech Skills'/>
       <div className="skills_container_carousel">
         <div className="skills_container_carousel_skill">
           <FontAwesomeIcon icon={faReact} />

@@ -4,6 +4,7 @@ import {
   faGithub,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import Heading from "./Heading";
 
 function Hero() {
   return (
@@ -11,7 +12,7 @@ function Hero() {
       <div className="hero_container_left">
         <p className="hero_container_left_subheading">Hello! I am</p>
         <h1>Sigita Zaromskiene</h1>
-        <h3>Front End Developer</h3>
+       <Heading text='Front End Developer'/>
         <div className="hero_container_left_features">
           <p>Web Developer</p>
           <p>React programmer</p>
