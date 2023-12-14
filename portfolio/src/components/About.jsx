@@ -1,11 +1,12 @@
 import Btn from "./Btn";
+import photo from "../UI/Img/me.jpg"
 
 function About() {
   return (
     <div className="about_container wrapper">
       <div className="about_container_left">
         <h3>
-          Hi there! I'm Sigita, and I love building cool stuff on the internet.
+          I'm Sigita, and I love building cool stuff on the internet.
           I switched my career two years ago and taught myself coding. I also
           completed a 6-month course in Front End Development at the Baltic
           Institute of Technology. My main expertise is in JavaScript, and I
@@ -17,7 +18,7 @@ function About() {
           <Btn className="btn" text="CONTACT ME" />
         </div>
       </div>
-      <img src="" alt="Sigita photo" />
+      <img src={photo} alt="Sigita" />
     </div>
   );
 }

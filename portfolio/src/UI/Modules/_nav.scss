@@ -1,6 +1,6 @@
 .nav_container {
   @include flex(space-between, center, row, 0px);
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 
   &_logo {
     height: 3.5rem;

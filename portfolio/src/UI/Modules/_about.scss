@@ -1,5 +1,5 @@
 .about_container {
-@include flex(center, center, row, 50px);
+@include flex(center, center, row, 150px);
   
 
   h3 {
@@ -7,6 +7,8 @@
     color: white;
     font-weight: 500;
     margin-bottom: 30px;
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
 
   &_left_buttons {
@@ -15,5 +17,11 @@
    
 
 
+  }
+
+  img {
+    height: 30rem;
+    width: 40rem;
+    border-radius: 5px;
   }
 }

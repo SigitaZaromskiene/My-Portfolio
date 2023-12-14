@@ -1,6 +1,30 @@
 .projects_container {
 
-    &_filter {
-        @include flex (flex-start, center, row, 30px)
-    }
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #00cf5d;
+        margin-bottom: 70px;
+        position: relative;
+        z-index: 222;
+
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 1px;
+        top: 45px;
+        width: 200px;
+        height: 3px;
+        background: linear-gradient(to left, #00cf5d, white 100%);
+        z-index: -1;
+        
+        
+      }
+}
+&_table {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
 }
