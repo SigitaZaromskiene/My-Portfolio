@@ -1,0 +1,19 @@
+.about_container {
+@include flex(center, center, row, 50px);
+  
+
+  h3 {
+
+    color: white;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  &_left_buttons {
+    @include flex(flex-start, center, row, 30px);
+
+   
+
+
+  }
+}

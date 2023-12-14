@@ -1,7 +1,6 @@
 .hero_container {
   @include flex(space-between, center, row, 0px);
-  padding: 0px 100px;
-  margin-bottom: 150px;
+  
 
 
   &_left {

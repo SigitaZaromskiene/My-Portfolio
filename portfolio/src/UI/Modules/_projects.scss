@@ -1,0 +1,6 @@
+.projects_container {
+
+    &_filter {
+        @include flex (flex-start, center, row, 30px)
+    }
+}

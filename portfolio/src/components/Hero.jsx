@@ -7,7 +7,7 @@ import {
 
 function Hero() {
   return (
-    <div className="hero_container">
+    <div className="hero_container wrapper">
       <div className="hero_container_left">
         <p className="hero_container_left_subheading">Hello! I am</p>
         <h1>Sigita Zaromskiene</h1>

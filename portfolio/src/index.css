@@ -21,3 +21,9 @@ code {
   width: 100%;
   background-color: #1d293a;
 }
+
+
+.wrapper {
+  padding: 0px 100px;
+  margin-bottom: 150px;
+}
