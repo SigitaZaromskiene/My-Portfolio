@@ -1,6 +1,6 @@
 .nav_container {
   @include flex(space-between, center, row, 0px);
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 
   &_logo {
     height: 3.5rem;
@@ -10,13 +10,10 @@
     text-align: center;
     font-size: 2rem;
     background-color: $mainGreenColor;
-
     border: 2px solid white;
   }
 
   &_links {
-
-
     font-size: 1.2rem;
     @include flex(center, center, row, 40px);
 
@@ -26,26 +23,23 @@
       border: 1px solid transparent;
       padding: 10px 15px;
       cursor: pointer;
-     
 
-       a{
+      a {
         text-decoration: none;
         color: white;
-       }
-      
+      }
 
       &:last-of-type a {
         border: 1px solid white;
         padding: 10px 15px;
         color: black;
         background-color: $mainGreenColor;
+        border-radius: 5px;
       }
-
-      
     }
   }
 }
 
 .active {
- color: $mainGreenColor;       
+  color: $mainGreenColor;
 }

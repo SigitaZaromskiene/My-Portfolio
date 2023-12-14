@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Btn from "./Btn";
 
 function Nav() {
   const [active, setActive] = useState("home");
@@ -57,7 +58,7 @@ function Nav() {
           </a>
         </div>
         <div className="nav_container_links_link">
-          <a href="#">RESUME</a>
+         <Btn text='RESUME' className='btn + btn_active'/>
         </div>
       </div>
     </div>
