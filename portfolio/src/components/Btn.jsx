@@ -1,7 +1,7 @@
-function Btn ({action, text})
+function Btn ({action, text, className})
     {
         return (
-            <button onClick={action}>{text}</button>
+            <button className={className} onClick={action}>{text}</button>
         )
     }
 export default Btn
