@@ -8,6 +8,11 @@ body {
   font-family: Lato, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 code {
@@ -20,10 +25,11 @@ code {
   width: 100%;
   background-color: #1d293a;
   border-bottom: 2px solid #00cf5d;
+  
 }
 
 
 .wrapper {
   padding: 0px 100px;
-  margin-bottom: 150px;
+  margin-bottom: 180px;
 }

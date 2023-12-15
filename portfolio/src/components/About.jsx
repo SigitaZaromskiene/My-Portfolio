@@ -1,12 +1,16 @@
 import Btn from "./Btn";
 import photo from "../UI/Img/me.jpg"
 import LoveToDo from "./LoveToDo";
+import { useContext } from "react";
+import { Global } from "./Global";
 
 function About() {
+
+  const { sectionRef, scrollToSection} = useContext(Global);
   return (
     <>
     <LoveToDo/>
-    <div className="about_container wrapper">
+    <div className="about_container wrapper" id="section2" ref={sectionRef}>
       <div className="about_container_left">
         <h3>
           I'm Sigita, and I love building cool stuff on the internet.
@@ -17,8 +21,9 @@ function About() {
           job opportunities that match my interests!{" "}
         </h3>
         <div className="about_container_left_buttons">
-          <Btn className="btn + btn_active" text="GET RESUME" />
-          <Btn className="btn" text="CONTACT ME" />
+          <Btn className="btn btn_active" text="GET RESUME" />
+          <Btn className="btn" text="CONTACT ME" action={scrollToSection}
+            href="#section4"/>
         </div>
       </div>
       <img src={photo} alt="Sigita" />

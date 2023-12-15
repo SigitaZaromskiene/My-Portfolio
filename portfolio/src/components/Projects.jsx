@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub} from "@fortawesome/free-brands-svg-icons";
 import Heading from "./Heading";
+import { Global } from "./Global";
+import { useContext } from "react";
 
 function Projects() {
+
+  const { sectionRef} = useContext(Global);
   return (
-    <div className="projects_container wrapper">
+    <div className="projects_container wrapper" id="section3" ref={sectionRef}>
       <Heading text='Projects'/>
       <div div className="projects_container_table ">
         <div className="projects_container_table_project ">
