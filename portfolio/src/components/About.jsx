@@ -1,6 +1,5 @@
 import Btn from "./Btn";
 import photo from "../UI/Img/me.jpg"
-import LoveToDo from "./LoveToDo";
 import { useContext } from "react";
 import { Global } from "./Global";
 
@@ -9,7 +8,7 @@ function About() {
   const { sectionRef, scrollToSection} = useContext(Global);
   return (
     <>
-    <LoveToDo/>
+
     <div className="about_container wrapper" id="section2" ref={sectionRef}>
       <div className="about_container_left">
         <h3>

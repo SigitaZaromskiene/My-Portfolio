@@ -23,5 +23,9 @@
     height: 30rem;
     width: 40rem;
     border-radius: 5px;
+    &:hover{
+      transform: scale(1.2);
+     
+  }
   }
 }
