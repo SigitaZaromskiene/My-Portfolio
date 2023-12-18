@@ -8,10 +8,10 @@
     border-radius: 5px;
 
     &_project {
-      @include flex(center, center, column, 0px);
+      @include flex(space-between,center, column, 0px);
       border: 1px solid white;
-      height: 400px;
-      width: 400px;
+      height: 750px;
+      width: 450px;
       padding: 30px;
       border-radius: 5px;
 
@@ -20,36 +20,61 @@
         margin: 20px;
         cursor: pointer;
 
-        svg {
-          height: 40px;
-          width: 40px;
+        a svg {
+
+          
+          height: 45px;
+          width: 45px;
           color: white;
 
-          &:hover {
-            color: $mainGreenColor;
+        
+
+          &:hover  {
+           color: $mainGreenColor;
+           fill: $mainGreenColor
+           
           }
+          
         }
       }
 
       h3 {
-        color: $mainGreenColor;
+       
+        background: linear-gradient(to left, #00cf5d, white 100%);
+        border-radius: 5px;
+        padding: 2px 8px;
         font-size: 1.5rem;
       }
 
+
       ul {
-        margin-bottom: 30px;
+        @include flex(flex-start, center, column, 20px);
+
+        li {
+          width: 100%;
+          @include flex(flex-start, flex-start, row, 20px);
+          color: white;
+          line-height: 1.5;
+          margin-bottom: 10px;
+          
+  
+          & span svg {
+            background-color: white;
+            border-radius: 5px;
+            padding: 2px;
+          }
+          
+        }
       }
-      li {
-        color: white;
-        line-height: 1.5;
-      }
+     
+      
 
       &_features {
         @include flex(center, center, row, 20px);
 
         p {
-          color: rgba(255, 255, 255, 0.344);
-          font-weight: 300;
+          color: rgba(255, 255, 255, 0.337);
+          font-weight: 400;
         }
       }
     }

@@ -11,7 +11,7 @@ function Contact() {
       <p>
         I'd love to connect and explore exciting opportunities with you!
         Wheather you have interesting projects, creative ideas, or just want to
-        chat, please do not hesitate to reach me.{" "}
+        chat, please do not hesitate to reach me - <a href="mailto:sigitapolekaite@yahoo.com" style={{color: 'crimson', cursor:'pointer', textDecoration:'none'}}>sigitapolekaite@yahoo.com</a>.
       </p>
       <div className="contact_container_links">
       <a

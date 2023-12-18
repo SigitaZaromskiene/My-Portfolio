@@ -12,7 +12,7 @@ function About() {
     <div className="about_container wrapper" id="section2" ref={sectionRef}>
       <div className="about_container_left">
         <h3>
-          I'm Sigita, and I love building cool stuff on the internet.
+          I'm Sigita from Kaunas, Lithuania, and I love building cool stuff on the internet.
           I switched my career two years ago and taught myself coding. I also
           completed a 6-month course in Front End Development at the Baltic
           Institute of Technology. My main expertise is in JavaScript, and I

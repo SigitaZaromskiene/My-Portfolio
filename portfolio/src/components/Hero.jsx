@@ -5,14 +5,27 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import Heading from "./Heading";
-import { useContext } from "react";
-import { Global } from "./Global";
+import { useState, useEffect } from "react";
 
 
 
 
 
 function Hero() {
+
+  const [color, setColor] = useState('black')
+
+
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      setColor(randomColor);
+    }, 2000);
+  
+    return () => clearInterval(intervalId);
+  }, []);
+    
 
 
 
@@ -21,12 +34,12 @@ function Hero() {
     <div className="hero_container wrapper" >
       <div className="hero_container_left">
         <p className="hero_container_left_subheading">Hello! I am</p>
-        <h1>Sigita Zaromskiene</h1>
+        <h1 style={{color:color}}>Sigita Žaromskienė</h1>
        <Heading text='Front End Developer'/>
         <div className="hero_container_left_features">
           <p>Web Developer</p>
-          <p>React programmer</p>
-          <p>Software Engineer</p>
+          <p>React Programmer</p>
+          <span>Software Engineer</span>
         </div>
         <div className="hero_container_left_icons">
           <a
