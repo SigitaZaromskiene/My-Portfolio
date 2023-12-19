@@ -6,6 +6,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Heading from "./Heading";
 import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { Global } from "./Global";
 
 
 
@@ -14,6 +16,7 @@ import { useState, useEffect } from "react";
 function Hero() {
 
   const [color, setColor] = useState('black')
+  const { sectionRef} = useContext(Global);
 
 
 

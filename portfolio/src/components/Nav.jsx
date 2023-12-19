@@ -1,33 +1,65 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Btn from "./Btn";
 import { useContext } from "react";
 import { Global } from "./Global";
+import MobileMenu from "./MobileMenu";
 
 
 function Nav() {
   const [active, setActive] = useState("home");
+  const [isSticky, setIsSticky] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // To make the scroll smooth
+    })}
+
 
  
   const { sectionRef, scrollToSection} = useContext(Global);
-  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+      setIsSticky(currentScroll > 0); // Set isSticky based on whether the scroll is not at the top
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
 
   
   return (
-    <div className="nav_container" id="section1" ref={sectionRef}>
-   
+    <>
+    
+    <div className={`nav_container ${isSticky ? "sticky" : ""}`}  id="section1" ref={sectionRef}>
+    
       <div className="nav_container_logo">S</div>
-      <div className='burger'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" dataSlot="icon" className="w-6 h-6">
+     
+      <div className='burger' onClick={toggleMobileMenu}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" dataSlot="icon" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
 
+
 </div>
+  {mobileMenu && <MobileMenu mobileMenu={mobileMenu}/>} 
+
       <div className="nav_container_links">
         
         <div onClick={() => setActive("home")}>
-          <a onClick={scrollToSection}
-            href="#section1"
+          <a onClick={scrollToTop}
+            href="#null"
             className={
               active === "home"
                 ? "nav_container_links_link + active"
@@ -80,7 +112,10 @@ function Nav() {
          <Btn text='RESUME' className='btn + btn_active'/>
         </div>
       </div>
+    
     </div>
+  
+    </>
   );
 }
 

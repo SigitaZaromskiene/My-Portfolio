@@ -3,23 +3,58 @@
   &_table {
     @include flex(center, center, row, 50px);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    padding: 30px;
+    padding: 50px;
     border-radius: 5px;
     flex-wrap: wrap;
     border-radius: 5px;
+    @include media(small) {
+        
+      padding: 10px;
+      @include flex(center, center, row, 50px);
+   
+       }
 
     
     
 
     &_project {
 
+     
+    
+
    
-      @include media(medium2) {
-        height: 850px;
-        width: 650px;
+      @include media(medium) {
+        height: 600px;
+        width: 670px;
+     
         
           
          }
+
+         @include media(medium2) {
+          height: 700px;
+          width: 670px;
+       
+          
+            
+           }
+
+         @include media(small) {
+          height: 810px;
+          width: 680px;
+          padding: 10px;
+          @include flex(space-between,center, column, 30px);
+         
+       
+           }
+           @include media(smallest) {
+            height: 860px;
+            width: 680px;
+            padding: 10px;
+            @include flex(space-between,center, column, 30px);
+           
+         
+             }
       
 
       
@@ -52,7 +87,7 @@
 
           &:hover  {
            color: $mainGreenColor;
-           fill: $mainGreenColor
+          
            
           }
           
@@ -60,6 +95,7 @@
       }
 
       h3 {
+      
         @include media(medium2) {
           text-align: center;
           
@@ -102,7 +138,12 @@
          }
 
          @include media(medium2) {
-          @include flex(center, center, column, 10px);
+          @include flex(center, center, row, 10px);
+        
+          
+         }
+         @include media(small) {
+          @include flex(center, center, row, 10px);
         
           
          }

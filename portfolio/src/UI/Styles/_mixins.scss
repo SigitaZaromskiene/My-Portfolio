@@ -41,4 +41,18 @@
     padding: 2px;
   }
 
+  .wrapper {
+    padding: 0px 100px;
+    margin-bottom: 180px;
   
+    @include media(large) {
+      padding: 0px 20px;
+      
+     }
+
+     @include media(small) {
+      padding: 0px;
+      
+        
+       }
+  }
