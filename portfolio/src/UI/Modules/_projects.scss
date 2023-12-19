@@ -1,4 +1,5 @@
 .projects_container {
+
   &_table {
     @include flex(center, center, row, 50px);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
@@ -7,7 +8,21 @@
     flex-wrap: wrap;
     border-radius: 5px;
 
+    
+    
+
     &_project {
+
+   
+      @include media(medium2) {
+        height: 850px;
+        width: 650px;
+        
+          
+         }
+      
+
+      
       @include flex(space-between,center, column, 0px);
       border: 1px solid white;
       height: 750px;
@@ -16,6 +31,12 @@
       border-radius: 5px;
 
       &_icons {
+
+        @include media(small) {
+        margin-bottom: 20px;
+        
+          
+         }
         @include flex(center, center, row, 20px);
         margin: 20px;
         cursor: pointer;
@@ -39,6 +60,13 @@
       }
 
       h3 {
+        @include media(medium2) {
+          text-align: center;
+          
+         
+          
+          
+         }
        
         background: linear-gradient(to left, #00cf5d, white 100%);
         border-radius: 5px;
@@ -66,9 +94,27 @@
       
 
       &_features {
+
+        @include media(medium) {
+          @include flex(center, center, row, 10px);
+        
+          
+         }
+
+         @include media(medium2) {
+          @include flex(center, center, column, 10px);
+        
+          
+         }
         @include flex(center, center, row, 20px);
 
         p {
+
+          @include media(medium2) {
+            margin: 0px;
+          
+            
+           }
           color: rgba(255, 255, 255, 0.337);
           font-weight: 400;
         }
