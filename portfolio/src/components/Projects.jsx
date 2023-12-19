@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faCheck} from "@fortawesome/free-brands-svg-icons";
+import { faGithub} from "@fortawesome/free-brands-svg-icons";
 import Heading from "./Heading";
 import { Global } from "./Global";
 import { useContext } from "react";

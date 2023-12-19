@@ -2,6 +2,17 @@
   @include flex(space-between, center, row, 0px);
   margin-bottom: 120px;
 
+  .burger svg{
+    display: none;
+    color: white;
+    cursor: pointer;
+    @include media(large) {
+      display: block;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
   &_logo {
     height: 3.5rem;
     width: 3.5rem;
@@ -14,6 +25,12 @@
   }
 
   &_links {
+
+  
+
+    @include media(large) {
+      display: none;
+    }
     font-size: 1.2rem;
     @include flex(center, center, row, 40px);
 

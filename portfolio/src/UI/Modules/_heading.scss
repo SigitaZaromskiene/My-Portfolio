@@ -18,7 +18,10 @@
       background: linear-gradient(to left, #00cf5d, white 100%);
       z-index: -1;
      
-     
+      @include media(medium2) {
+       right: 50%;
+       width: 320px;
+      }
       
       
       
