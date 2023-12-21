@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { Global } from "./Global";
 import MobileMenu from "./MobileMenu";
 import Burger from "./Burger";
+import UploadCV from "./extras/UploadCV";
 
 function Nav() {
   const [active, setActive] = useState("home");
@@ -100,9 +101,7 @@ function Nav() {
               CONTACT
             </a>
           </div>
-          <div className="nav_container_links_link">
-            <Btn text="RESUME" className="btn + btn_active" />
-          </div>
+         <UploadCV/>
         </div>
       </div>
     </>
