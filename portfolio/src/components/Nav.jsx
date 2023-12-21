@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { scrollToTop } from "./extras/ScrollToTop";
 
 import Btn from "./Btn";
 import { useContext } from "react";
@@ -10,34 +11,40 @@ function Nav() {
   const [active, setActive] = useState("home");
   const [isSticky, setIsSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  
 
   const toggleMobileMenu = () => {
     setMobileMenu(!mobileMenu);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // To make the scroll smooth
-    })}
+
 
 
  
   const { sectionRef, scrollToSection} = useContext(Global);
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY || document.documentElement.scrollTop;
 
-      setIsSticky(currentScroll > 0); // Set isSticky based on whether the scroll is not at the top
+      if (currentScroll === 0) {
+        
+        setIsSticky(false); 
+      } else if (currentScroll < lastScrollTop) {
+      
+        setIsSticky(true); 
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
     };
 
+    let lastScrollTop = 0; 
+
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   
   return (
@@ -53,7 +60,7 @@ function Nav() {
 
 
 </div>
-  {mobileMenu && <MobileMenu mobileMenu={mobileMenu}/>} 
+  {mobileMenu && <MobileMenu setMobileMenu={setMobileMenu} mobileMenu={mobileMenu}/>} 
 
       <div className="nav_container_links">
         
