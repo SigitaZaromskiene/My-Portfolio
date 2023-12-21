@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { scrollToTop } from "./extras/ScrollToTop";
-import Btn from "./Btn";
 import { useContext } from "react";
 import { Global } from "./Global";
 import MobileMenu from "./MobileMenu";
@@ -52,7 +51,7 @@ function Nav() {
           <div onClick={() => setActive("home")}>
             <a
               onClick={scrollToTop}
-              href="#null"
+              href="/"
               className={
                 active === "home"
                   ? "nav_container_links_link + active"
