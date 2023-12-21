@@ -1,6 +1,30 @@
 .nav_container {
   @include flex(space-between, center, row, 0px);
   margin-bottom: 120px;
+  transition: top 0.3s ease;
+
+  &.sticky {
+    position: fixed;
+    padding: 10px 50px;
+    background-color: rgba(128, 128, 128, 0.273);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    top: 0;
+  }
+
+  .burger svg {
+    display: none;
+    color: white;
+    cursor: pointer;
+
+    @include media(large) {
+      display: block;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
 
   &_logo {
     height: 3.5rem;
@@ -14,6 +38,9 @@
   }
 
   &_links {
+    @include media(large) {
+      display: none;
+    }
     font-size: 1.2rem;
     @include flex(center, center, row, 40px);
 

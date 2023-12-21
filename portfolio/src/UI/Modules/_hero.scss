@@ -1,10 +1,21 @@
 .hero_container {
   @include flex(space-between, center, row, 0px);
 
+  @include media(large) {
+    margin: 0px;
+    @include flex(center, center, column, 120px);
+  }
+
   &_left {
+    @include media(large) {
+      @include flex(center, center, column, 20px);
+    }
     h1 {
       font-size: 4rem;
       margin-bottom: 40px;
+      @include media(medium2) {
+        text-align: center;
+      }
     }
 
     &_subheading {
@@ -17,8 +28,27 @@
       margin-bottom: 40px;
       color: white;
 
-      p, span {
+      @include media(large) {
+        @include flex(center, flex-start, column, 20px);
+        margin-bottom: 60px;
+      }
+
+      p,
+      span {
         font-size: 1.5rem;
+        @include media(large) {
+          margin: 0px;
+          @include flex(center, flex-start, row, 20px);
+        }
+      }
+
+      p span,
+      span span {
+        display: none;
+
+        @include media(large) {
+          display: inline-block;
+        }
       }
 
       & p:after {
@@ -30,8 +60,11 @@
         border-radius: 50%;
         background-color: $mainGreenColor;
         margin-left: 20px;
+
+        @include media(large) {
+          display: none;
+        }
       }
-      
     }
 
     &_icons {

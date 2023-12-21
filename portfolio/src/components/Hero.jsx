@@ -6,40 +6,37 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Heading from "./Heading";
 import { useState, useEffect } from "react";
-
-
-
-
+import Tick from "./extras/Tick";
 
 function Hero() {
-
-  const [color, setColor] = useState('black')
-
-
+  const [color, setColor] = useState("black");
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      const randomColor =
+        "#" + Math.floor(Math.random() * 16777215).toString(16);
       setColor(randomColor);
     }, 2000);
-  
+
     return () => clearInterval(intervalId);
   }, []);
-    
 
-
-
-  
   return (
-    <div className="hero_container wrapper" >
+    <div className="hero_container wrapper">
       <div className="hero_container_left">
         <p className="hero_container_left_subheading">Hello! I am</p>
-        <h1 style={{color:color}}>Sigita Žaromskienė</h1>
-       <Heading text='Front End Developer'/>
+        <h1 style={{ color: color }}>Sigita Žaromskienė</h1>
+        <Heading text="Front End Developer" />
         <div className="hero_container_left_features">
-          <p>Web Developer</p>
-          <p>React Programmer</p>
-          <span>Software Engineer</span>
+          <p>
+            Web Developer <Tick/>
+          </p>
+          <p>
+            React Programmer <Tick/>
+          </p>
+          <span>
+            Software Engineer <Tick/>
+          </span>
         </div>
         <div className="hero_container_left_icons">
           <a

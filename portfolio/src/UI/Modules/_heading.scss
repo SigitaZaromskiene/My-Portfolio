@@ -1,26 +1,24 @@
 .heading {
-    font-size: 2rem;
-    font-weight: 600;
-    color: $mainGreenColor;
-    position: relative;
-    z-index: 221;
-    margin-bottom: 60px;
-   
-
+  font-size: 2rem;
+  font-weight: 600;
+  color: $mainGreenColor;
+  position: relative;
+  z-index: 221;
+  margin-bottom: 60px;
 
   &:before {
-      content: "";
-      position: absolute;
-      left: 1px;
-      top: 45px;
-      width: 350px;
-      height: 3px;
-      background: linear-gradient(to left, #00cf5d, white 100%);
-      z-index: -1;
-     
-     
-      
-      
-      
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 45px;
+    width: 350px;
+    height: 3px;
+    background: linear-gradient(to left, #00cf5d, white 100%);
+    z-index: -1;
+
+    @include media(medium2) {
+      right: 50%;
+      width: 320px;
     }
   }
+}

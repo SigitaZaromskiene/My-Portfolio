@@ -2,13 +2,40 @@
   &_table {
     @include flex(center, center, row, 50px);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    padding: 30px;
+    padding: 50px;
     border-radius: 5px;
     flex-wrap: wrap;
     border-radius: 5px;
+    @include media(small) {
+      padding: 10px;
+      @include flex(center, center, row, 50px);
+    }
 
     &_project {
-      @include flex(space-between,center, column, 0px);
+      @include media(medium) {
+        height: 600px;
+        width: 670px;
+      }
+
+      @include media(medium2) {
+        height: 700px;
+        width: 670px;
+      }
+
+      @include media(small) {
+        height: 810px;
+        width: 680px;
+        padding: 10px;
+        @include flex(space-between, center, column, 30px);
+      }
+      @include media(smallest) {
+        height: 860px;
+        width: 680px;
+        padding: 10px;
+        @include flex(space-between, center, column, 30px);
+      }
+
+      @include flex(space-between, center, column, 0px);
       border: 1px solid white;
       height: 750px;
       width: 450px;
@@ -16,36 +43,34 @@
       border-radius: 5px;
 
       &_icons {
+        @include media(small) {
+          margin-bottom: 20px;
+        }
         @include flex(center, center, row, 20px);
         margin: 20px;
         cursor: pointer;
 
         a svg {
-
-          
           height: 45px;
           width: 45px;
           color: white;
 
-        
-
-          &:hover  {
-           color: $mainGreenColor;
-           fill: $mainGreenColor
-           
+          &:hover {
+            color: $mainGreenColor;
           }
-          
         }
       }
 
       h3 {
-       
+        @include media(medium2) {
+          text-align: center;
+        }
+
         background: linear-gradient(to left, #00cf5d, white 100%);
         border-radius: 5px;
         padding: 2px 8px;
         font-size: 1.5rem;
       }
-
 
       ul {
         @include flex(flex-start, center, column, 20px);
@@ -56,23 +81,26 @@
           color: white;
           line-height: 1.5;
           margin-bottom: 10px;
-          
-  
-          & span svg {
-            background-color: white;
-            border-radius: 5px;
-            padding: 2px;
-          }
-          
         }
       }
-     
-      
 
       &_features {
+        @include media(medium) {
+          @include flex(center, center, row, 10px);
+        }
+
+        @include media(medium2) {
+          @include flex(center, center, row, 10px);
+        }
+        @include media(small) {
+          @include flex(center, center, row, 10px);
+        }
         @include flex(center, center, row, 20px);
 
         p {
+          @include media(medium2) {
+            margin: 0px;
+          }
           color: rgba(255, 255, 255, 0.337);
           font-weight: 400;
         }
