@@ -1,5 +1,5 @@
 function Burger({ setMobileMenu }) {
-    
+
   const toggleMobileMenu = () => {
     setMobileMenu((prev) => !prev);
   };
@@ -12,7 +12,6 @@ function Burger({ setMobileMenu }) {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        dataSlot="icon"
         className="w-6 h-6"
       >
         <path
