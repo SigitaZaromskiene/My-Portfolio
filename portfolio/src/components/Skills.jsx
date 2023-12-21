@@ -11,12 +11,33 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Heading from "./Heading";
 
+const skills = [
+  { skill: "React", icon: faReact },
+  { skill: "JS", icon: faJs },
+  { skill: "SCSS", icon: faSass },
+  { skill: "CSS", icon: faCss3Alt },
+  { skill: "Git", icon: faGit },
+  { skill: "Github", icon: faGithub },
+  { skill: "NPM", icon: faNpm },
+  { skill: "Node.js", icon: faNode },
+  { skill: "Redux", icon: faNode },
+  { skill: "Jest", icon: faNode },
+];
+
 function Skills() {
   return (
     <div className="skills_container wrapper">
-        <Heading text='Tech Skills'/>
+      <Heading text="Tech Skills" />
       <div className="skills_container_carousel">
-        <div className="skills_container_carousel_skill">
+        {skills.map((s) => (
+          <div className="skills_container_carousel_skill">
+            <FontAwesomeIcon icon={s.icon} />
+            <p>{s.skill}</p>
+          </div>
+        ))}
+        
+
+        {/* <div className="skills_container_carousel_skill">
           <FontAwesomeIcon icon={faReact} />
           <p>REACT</p>
         </div>
@@ -49,7 +70,7 @@ function Skills() {
           <FontAwesomeIcon icon={faGit} />
           <p>Git</p>
         </div>
-        
+
         <div className="skills_container_carousel_skill">
           {" "}
           <FontAwesomeIcon icon={faGithub} />
@@ -62,7 +83,7 @@ function Skills() {
         <div className="skills_container_carousel_skill">
           <FontAwesomeIcon icon={faNode} />
           <p>Node.js</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

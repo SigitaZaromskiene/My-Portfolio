@@ -6,52 +6,37 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Heading from "./Heading";
 import { useState, useEffect } from "react";
-import { useContext } from "react";
-import { Global } from "./Global";
-
-
-
-
+import Tick from "./extras/Tick";
 
 function Hero() {
-
-  const [color, setColor] = useState('black')
-  const { sectionRef} = useContext(Global);
-
-
+  const [color, setColor] = useState("black");
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      const randomColor =
+        "#" + Math.floor(Math.random() * 16777215).toString(16);
       setColor(randomColor);
     }, 2000);
-  
+
     return () => clearInterval(intervalId);
   }, []);
-    
 
-
-
-  
   return (
-    <div className="hero_container wrapper" >
+    <div className="hero_container wrapper">
       <div className="hero_container_left">
         <p className="hero_container_left_subheading">Hello! I am</p>
-        <h1 style={{color:color}}>Sigita Žaromskienė</h1>
-       <Heading text='Front End Developer'/>
+        <h1 style={{ color: color }}>Sigita Žaromskienė</h1>
+        <Heading text="Front End Developer" />
         <div className="hero_container_left_features">
-          <p>Web Developer  <span> 
-<svg className='tick_icons' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" color="white" viewBox="0 0 24 24">
-<path d="M 19.980469 5.9902344 A 1.0001 1.0001 0 0 0 19.292969 6.2929688 L 9 16.585938 L 5.7070312 13.292969 A 1.0001 1.0001 0 1 0 4.2929688 14.707031 L 8.2929688 18.707031 A 1.0001 1.0001 0 0 0 9.7070312 18.707031 L 20.707031 7.7070312 A 1.0001 1.0001 0 0 0 19.980469 5.9902344 z"></path>
-</svg>   </span></p>
-          <p>React Programmer  <span>
-<svg className='tick_icons' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" color="white" viewBox="0 0 24 24">
-<path d="M 19.980469 5.9902344 A 1.0001 1.0001 0 0 0 19.292969 6.2929688 L 9 16.585938 L 5.7070312 13.292969 A 1.0001 1.0001 0 1 0 4.2929688 14.707031 L 8.2929688 18.707031 A 1.0001 1.0001 0 0 0 9.7070312 18.707031 L 20.707031 7.7070312 A 1.0001 1.0001 0 0 0 19.980469 5.9902344 z"></path>
-</svg>   </span></p>
-          <span>Software Engineer  <span>
-<svg className='tick_icons' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" color="white" viewBox="0 0 24 24">
-<path d="M 19.980469 5.9902344 A 1.0001 1.0001 0 0 0 19.292969 6.2929688 L 9 16.585938 L 5.7070312 13.292969 A 1.0001 1.0001 0 1 0 4.2929688 14.707031 L 8.2929688 18.707031 A 1.0001 1.0001 0 0 0 9.7070312 18.707031 L 20.707031 7.7070312 A 1.0001 1.0001 0 0 0 19.980469 5.9902344 z"></path>
-</svg>   </span></span>
+          <p>
+            Web Developer <Tick />
+          </p>
+          <p>
+            React Programmer <Tick />
+          </p>
+          <span>
+            Software Engineer <Tick />
+          </span>
         </div>
         <div className="hero_container_left_icons">
           <a
