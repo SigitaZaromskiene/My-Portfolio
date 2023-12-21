@@ -1,13 +1,10 @@
 .hero_container {
   @include flex(space-between, center, row, 0px);
 
-  
-  
-    @include media(large) {
-      margin: 0px;
-      @include flex(center, center, column, 120px);
-    }
-  
+  @include media(large) {
+    margin: 0px;
+    @include flex(center, center, column, 120px);
+  }
 
   &_left {
     @include media(large) {
@@ -19,7 +16,6 @@
       @include media(medium2) {
         text-align: center;
       }
-     
     }
 
     &_subheading {
@@ -37,7 +33,8 @@
         margin-bottom: 60px;
       }
 
-      p, span {
+      p,
+      span {
         font-size: 1.5rem;
         @include media(large) {
           margin: 0px;
@@ -45,14 +42,14 @@
         }
       }
 
-      p span, span span {
-display: none;
+      p span,
+      span span {
+        display: none;
 
-@include media(large) {
-  display: inline-block;
-}
+        @include media(large) {
+          display: inline-block;
+        }
       }
-
 
       & p:after {
         content: "";
@@ -66,11 +63,8 @@ display: none;
 
         @include media(large) {
           display: none;
-          
-          
         }
       }
-      
     }
 
     &_icons {

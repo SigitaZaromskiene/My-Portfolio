@@ -1,14 +1,11 @@
 .about_container {
-@include flex(center, center, row, 150px);
-@include media(large) {
-  @include flex(center, center, column, 150px);
-  text-align: center;
-  
- }
-  
+  @include flex(center, center, row, 150px);
+  @include media(large) {
+    @include flex(center, center, column, 150px);
+    text-align: center;
+  }
 
   h3 {
-
     color: white;
     font-weight: 500;
     margin-bottom: 50px;
@@ -20,26 +17,18 @@
     @include flex(flex-start, center, row, 30px);
     @include media(large) {
       @include flex(center, center, row, 30px);
-      
-     }
-
-   
-
-
+    }
   }
 
   img {
-
     @include media(large) {
-      
       width: 25rem;
-     }
+    }
     height: 30rem;
     width: 40rem;
     border-radius: 5px;
-    &:hover{
+    &:hover {
       transform: scale(1.2);
-     
-  }
+    }
   }
 }

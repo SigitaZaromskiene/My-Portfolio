@@ -1,34 +1,30 @@
 .btn {
-    border: 2px solid $mainGreenColor;
-    padding: 10px 15px;
-    color: $mainGreenColor;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    width: 11rem;
-    background-color: white;
-    font-weight: 600;
+  border: 2px solid $mainGreenColor;
+  padding: 10px 15px;
+  color: $mainGreenColor;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 11rem;
+  background-color: white;
+  font-weight: 600;
 
-&:hover {
+  &:hover {
     background-color: $mainGreenColor;
     border: 2px solid $mainGreenColor;
     color: white;
-}
+  }
 
-    &_active {
-        background-color: $mainGreenColor;
-        border: 2px solid transparent;
-        color: white;
+  &_active {
+    background-color: $mainGreenColor;
+    border: 2px solid transparent;
+    color: white;
 
-        &:hover {
-            background-color: white;
-            color: $mainGreenColor;
+    &:hover {
+      background-color: white;
+      color: $mainGreenColor;
 
-            border: 2px solid $mainGreenColor;
-        }
-
-
+      border: 2px solid $mainGreenColor;
     }
-
-    
+  }
 }

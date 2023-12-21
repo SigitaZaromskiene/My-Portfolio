@@ -29,13 +29,13 @@ function Hero() {
         <Heading text="Front End Developer" />
         <div className="hero_container_left_features">
           <p>
-            Web Developer <Tick />
+            Web Developer <Tick/>
           </p>
           <p>
-            React Programmer <Tick />
+            React Programmer <Tick/>
           </p>
           <span>
-            Software Engineer <Tick />
+            Software Engineer <Tick/>
           </span>
         </div>
         <div className="hero_container_left_icons">
