@@ -38,7 +38,7 @@ function Project5() {
           <FontAwesomeIcon icon={faGithub} />
         </a>
         <a
-          href="https://sigitazaromskiene.github.io/16-number-game/"
+          href="https://sigitazaromskiene.github.io/Roll-the-dice-game/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "white" }}
