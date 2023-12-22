@@ -6,7 +6,7 @@ function Contact() {
   const { sectionRef } = useContext(Global);
   
   return (
-    <div className="contact_container wrapper" id="section4" ref={sectionRef}>
+    <div className="contact_container wrapper" id="contact" ref={sectionRef}>
       <Heading text="Get in Touch" />
       <p>
         I'd love to connect and explore exciting opportunities with you!

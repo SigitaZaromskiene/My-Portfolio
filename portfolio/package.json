@@ -18,6 +18,7 @@
     "sass": "^1.69.5",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://sigitazaromskiene.github.io/portfolio/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -45,7 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.1.0"
-    
   }
 }

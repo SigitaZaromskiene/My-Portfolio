@@ -7,7 +7,7 @@ function About() {
   const { sectionRef, scrollToSection } = useContext(Global);
   return (
     <>
-      <div className="about_container wrapper" id="section2" ref={sectionRef}>
+      <div className="about_container wrapper" id="about" ref={sectionRef}>
         <div className="about_container_left">
           <h3>
             I'm Sigita from Kaunas, Lithuania, and I love building cool stuff on

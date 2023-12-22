@@ -13,7 +13,7 @@ function Projects() {
   const { sectionRef } = useContext(Global);
 
   return (
-    <div className="projects_container wrapper" id="section3" ref={sectionRef}>
+    <div className="projects_container wrapper" id="projects" ref={sectionRef}>
       <Heading text="Projects" />
       <div div className="projects_container_table">
         <Project1 />

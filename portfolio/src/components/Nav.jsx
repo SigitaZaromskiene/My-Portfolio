@@ -64,7 +64,7 @@ function Nav() {
           <div onClick={() => setActive("about")}>
             <a
               onClick={scrollToSection}
-              href="#section2"
+              href="#about"
               className={
                 active === "about"
                   ? "nav_container_links_link + active"
@@ -77,7 +77,7 @@ function Nav() {
           <div onClick={() => setActive("projects")}>
             <a
               onClick={scrollToSection}
-              href="#section3"
+              href="#projects"
               className={
                 active === "projects"
                   ? "nav_container_links_link + active"
@@ -90,7 +90,7 @@ function Nav() {
           <div onClick={() => setActive("contact")}>
             <a
               onClick={scrollToSection}
-              href="#section4"
+              href="#contact"
               className={
                 active === "contact"
                   ? "nav_container_links_link + active"
