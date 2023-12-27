@@ -8,7 +8,7 @@ I'm Sigita, a passionate frontend developer who loves building engaging web appl
 
 ## Portfolio 🌐
 
-Feel free to explore my portfolio website [here](https://sigitazaromskiene.github.io/portfolio/). It showcases my projects, skills, and experiences.
+Feel free to explore my portfolio website [here](https://sigitazaromskiene.github.io/My-Portfolio/). It showcases my projects, skills, and experiences.
 
 ## Technologies Used 🛠️
 
