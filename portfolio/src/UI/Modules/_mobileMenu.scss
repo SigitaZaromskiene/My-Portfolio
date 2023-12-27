@@ -22,11 +22,11 @@
 
     @include media(small) {
       font-size: 1.2rem;
-      width: 350px;
+      width: 400px;
     }
     @include media(smallest) {
       font-size: 1.2rem;
-      width: 220px;
+      width: 300px;
     }
   }
 
