@@ -1,4 +1,6 @@
 .skills_container {
+
+
   &_carousel {
     @include flex(center, center, row, 80px);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
@@ -10,6 +12,11 @@
 
     @include media(large) {
       @include flex(center, center, row, 50px);
+    }
+    @include media(small) {
+      @include flex(center, center, row, 30px);
+      flex-wrap: wrap; 
+     
     }
 
     &_skill {

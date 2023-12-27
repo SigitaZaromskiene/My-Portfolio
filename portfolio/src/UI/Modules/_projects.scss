@@ -29,10 +29,10 @@
         @include flex(space-between, center, column, 30px);
       }
       @include media(smallest) {
-        height: 860px;
+        height: 1100px;
         width: 680px;
         padding: 10px;
-        @include flex(space-between, center, column, 30px);
+        @include flex(center, center, column, 30px);
       }
 
       @include flex(space-between, center, column, 0px);
@@ -94,6 +94,9 @@
         }
         @include media(small) {
           @include flex(center, center, row, 10px);
+        }
+        @include media(smallest) {
+          @include flex(center, center, column, 10px);
         }
         @include flex(center, center, row, 20px);
 
