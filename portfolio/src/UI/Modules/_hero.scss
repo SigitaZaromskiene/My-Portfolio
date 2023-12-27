@@ -7,18 +7,19 @@
   }
 
   &_left {
-    @include media(large) {
-      @include flex(center, center, column, 20px);
-    }
-
-    @include media(large) {
-      @include flex(center, flex-start, column, 20px);
+    @include media(medium2) {
+      @include flex(center, flex-start, column, 0px);
     }
 
     h1 {
       font-size: 4rem;
       margin-bottom: 40px;
+
       @include media(medium2) {
+        font-size: 3rem;
+        margin-top: 10px;
+      }
+      @include media(medium) {
         text-align: center;
       }
 
@@ -32,10 +33,9 @@
       color: $mainGreenColor;
       font-size: 1.8rem;
       @include media(smallest) {
-       text-align: center;
+        text-align: center;
         width: 100%;
       }
-      
     }
 
     &_features {
@@ -45,8 +45,8 @@
 
       @include media(smallest) {
         @include flex(center, center, row, 30px);
-         width: 100%;
-       }
+        width: 100%;
+      }
 
       @include media(large) {
         @include flex(center, flex-start, column, 20px);
@@ -60,9 +60,6 @@
           margin: 0px;
           @include flex(center, flex-start, row, 20px);
         }
-      
-
-       
       }
 
       p span,
@@ -96,8 +93,8 @@
 
       @include media(smallest) {
         @include flex(center, center, row, 30px);
-         width: 100%;
-       }
+        width: 100%;
+      }
 
       a {
         color: white;

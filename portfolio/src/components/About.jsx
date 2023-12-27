@@ -2,6 +2,7 @@ import Btn from "./Btn";
 import photo from "../UI/Img/me.jpg";
 import { useContext } from "react";
 import { Global } from "./Global";
+import UploadCV from "./extras/UploadCV";
 
 function About() {
   const { sectionRef, scrollToSection } = useContext(Global);
@@ -18,12 +19,12 @@ function About() {
             excited about any job opportunities that match my interests!{" "}
           </h3>
           <div className="about_container_left_buttons">
-            <Btn className="btn btn_active" text="GET RESUME" />
+            <UploadCV />
             <Btn
               className="btn"
               text="CONTACT ME"
               action={scrollToSection}
-              href="#section4"
+              href="#contact"
             />
           </div>
         </div>

@@ -5,10 +5,16 @@ import LoveToDo from "./LoveToDo";
 import Nav from "./Nav";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import { scrollToTop } from "./extras/ScrollToTop";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
-    <>
+    <div>
       <Nav />
       <Hero />
       <About />
@@ -16,7 +22,7 @@ function Home() {
       <LoveToDo />
       <Projects />
       <Contact />
-    </>
+    </div>
   );
 }
 

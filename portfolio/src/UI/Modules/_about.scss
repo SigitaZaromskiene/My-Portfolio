@@ -5,11 +5,11 @@
     text-align: center;
   }
 
- &_left {
-  @include media(small) {
-    @include flex(center, center, column, 50px);
+  &_left {
+    @include media(small) {
+      @include flex(center, center, column, 50px);
+    }
   }
- }
 
   h3 {
     color: white;
@@ -18,12 +18,10 @@
     font-size: 1.5rem;
     line-height: 1.5;
 
-    @include media(small) {
+    @include media(smallest) {
       font-size: 1.2rem;
       width: 320px;
     }
-
-   
   }
 
   &_left_buttons {

@@ -50,10 +50,7 @@
 
   @include media(small) {
     padding: 0px;
-    
   }
-
-  
 }
 
 .app_container {
@@ -64,6 +61,5 @@
 
   @include media(small) {
     padding: 40px 20px;
-    
   }
 }

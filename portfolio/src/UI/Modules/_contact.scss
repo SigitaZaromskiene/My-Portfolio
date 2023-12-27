@@ -13,7 +13,6 @@
     margin-bottom: 50px;
 
     @include media(small) {
-      
       @include flex(center, center, column, 30px);
     }
 

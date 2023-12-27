@@ -8,7 +8,6 @@
 
   @include media(small) {
     font-size: 1.5rem;
-    
   }
 
   &:before {
@@ -27,14 +26,9 @@
       width: 320px;
     }
 
-
     @include media(small) {
-      
-
-    
       right: 50%;
       width: 300px;
     }
-
- }
+  }
 }

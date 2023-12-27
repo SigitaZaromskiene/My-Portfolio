@@ -39,10 +39,14 @@ function Nav() {
     <>
       <div
         className={`nav_container ${isSticky ? "sticky" : ""}`}
-        id="section1"
+        id="#home"
         ref={sectionRef}
       >
-        <div className="nav_container_logo">S</div>
+        <div className="nav_container_logo" onClick={() => setActive("home")}>
+          <a onClick={scrollToTop} href="#home">
+            S
+          </a>
+        </div>
         <Burger setMobileMenu={setMobileMenu} />
         {mobileMenu && (
           <MobileMenu setMobileMenu={setMobileMenu} mobileMenu={mobileMenu} />
@@ -51,7 +55,7 @@ function Nav() {
           <div onClick={() => setActive("home")}>
             <a
               onClick={scrollToTop}
-              href="/"
+              href="#home"
               className={
                 active === "home"
                   ? "nav_container_links_link + active"
@@ -100,7 +104,7 @@ function Nav() {
               CONTACT
             </a>
           </div>
-         <UploadCV/>
+          <UploadCV />
         </div>
       </div>
     </>

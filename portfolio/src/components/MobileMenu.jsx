@@ -14,22 +14,22 @@ function MobileMenu({ mobileMenu, setMobileMenu }) {
     <div className={`mobile_container ${mobileMenu ? "active" : ""}`}>
       <ul className="mobile_container_menu">
         <li>
-          <a onClick={toHomeSectionHandler} href="#null">
+          <a onClick={toHomeSectionHandler} href="#home">
             HOME
           </a>
         </li>
         <li>
-          <a onClick={mobileMenuNotVisible} href="#section2">
+          <a onClick={mobileMenuNotVisible} href="#about">
             ABOUT
           </a>
         </li>
         <li>
-          <a onClick={mobileMenuNotVisible} href="#section3">
+          <a onClick={mobileMenuNotVisible} href="#projects">
             PROJECTS
           </a>
         </li>
         <li>
-          <a onClick={mobileMenuNotVisible} href="#section4">
+          <a onClick={mobileMenuNotVisible} href="#contact">
             CONTACT
           </a>
         </li>
