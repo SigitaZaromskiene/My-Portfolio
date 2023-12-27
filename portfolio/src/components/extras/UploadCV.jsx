@@ -2,7 +2,7 @@ import Btn from "../Btn";
 
 function UploadCV() {
   const handleDownload = () => {
-    const cvUrl = 'https://www.dropbox.com/scl/fi/ijwmsg1qvjtl8p7hjvry1/CV-FRONT-END.pdf?rlkey=rhm7252orlpmt0kd93x9koril&dl=0'; 
+    const cvUrl = 'https://www.dropbox.com/scl/fi/2x3cqykncn0dop0w6ddh2/FRONT-END-CV.pdf?rlkey=i0rem2qeyi1raj1zbgd8ld2qg&dl=0'; 
     const link = document.createElement('a');
     link.href = cvUrl;
     link.target = '_blank'
