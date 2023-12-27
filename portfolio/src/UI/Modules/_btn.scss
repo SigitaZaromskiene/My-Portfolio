@@ -9,7 +9,6 @@
   background-color: white;
   font-weight: 600;
   text-decoration: none;
-  
 
   &:hover {
     background-color: $mainGreenColor;
@@ -21,11 +20,11 @@
     background-color: $mainGreenColor;
     border: 2px solid transparent;
     color: white;
+  
 
     &:hover {
       background-color: white;
       color: $mainGreenColor;
-
       border: 2px solid $mainGreenColor;
     }
   }
