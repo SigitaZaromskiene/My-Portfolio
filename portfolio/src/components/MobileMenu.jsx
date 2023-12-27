@@ -1,4 +1,5 @@
 import { scrollToTop } from "./extras/ScrollToTop";
+import MyCV from "../UI/Img/MyCV.pdf"
 function MobileMenu({ mobileMenu, setMobileMenu }) {
 
   const mobileMenuNotVisible = () => {
@@ -49,6 +50,12 @@ function MobileMenu({ mobileMenu, setMobileMenu }) {
             d="M6 18 18 6M6 6l12 12"
           />
         </svg>
+        <li>
+        <a href={MyCV} download="MY_CV.pdf">
+      {" "}
+      RESUME{" "}
+    </a>
+        </li>
       </ul>
     </div>
   );
