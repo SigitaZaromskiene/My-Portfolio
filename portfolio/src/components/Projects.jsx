@@ -15,7 +15,7 @@ function Projects() {
   return (
     <div className="projects_container wrapper" id="projects" ref={sectionRef}>
       <Heading text="Projects" />
-      <div div className="projects_container_table">
+      <div className="projects_container_table">
         <Project1 />
         <Project2 />
         <Project3 />
